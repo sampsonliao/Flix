@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,40 +15,38 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQ2-ID-hfB">
-                                <rect key="frame" x="67" y="226" width="241" height="235"/>
+                                <rect key="frame" x="67" y="70" width="533" height="235"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flix" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cG1-71-26U">
-                                        <rect key="frame" x="56" y="142" width="129" height="106"/>
+                                        <rect key="frame" x="202" y="142" width="129" height="106"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="88"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="launch_image" translatesAutoresizingMaskIntoConstraints="NO" id="zSB-Uq-pT4">
-                                        <rect key="frame" x="52" y="8" width="137" height="139"/>
+                                        <rect key="frame" x="197.5" y="8" width="138" height="139"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="zSB-Uq-pT4" firstAttribute="top" secondItem="nQ2-ID-hfB" secondAttribute="top" constant="8" id="JCF-zN-dNv"/>
-                                    <constraint firstItem="cG1-71-26U" firstAttribute="top" secondItem="zSB-Uq-pT4" secondAttribute="bottom" constant="-5" id="cjI-FJ-KW0"/>
-                                    <constraint firstItem="zSB-Uq-pT4" firstAttribute="leading" secondItem="nQ2-ID-hfB" secondAttribute="leading" constant="52" id="o3v-hS-pu6"/>
-                                    <constraint firstItem="cG1-71-26U" firstAttribute="centerX" secondItem="nQ2-ID-hfB" secondAttribute="centerX" id="uXh-bj-2Jq"/>
-                                    <constraint firstItem="zSB-Uq-pT4" firstAttribute="centerX" secondItem="nQ2-ID-hfB" secondAttribute="centerX" id="y0Z-0M-Zf6"/>
+                                    <constraint firstItem="zSB-Uq-pT4" firstAttribute="top" secondItem="nQ2-ID-hfB" secondAttribute="top" constant="8" id="Ibg-60-f5l"/>
+                                    <constraint firstAttribute="bottom" secondItem="zSB-Uq-pT4" secondAttribute="bottom" constant="88" id="S2t-z9-GuW"/>
+                                    <constraint firstItem="cG1-71-26U" firstAttribute="centerX" secondItem="nQ2-ID-hfB" secondAttribute="centerX" id="hIq-C6-jSB"/>
+                                    <constraint firstItem="cG1-71-26U" firstAttribute="top" secondItem="zSB-Uq-pT4" secondAttribute="bottom" constant="-5" id="qd0-eT-Sgf"/>
+                                    <constraint firstItem="zSB-Uq-pT4" firstAttribute="centerX" secondItem="nQ2-ID-hfB" secondAttribute="centerX" id="vjP-ju-Dfq"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="nQ2-ID-hfB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="H28-dc-qAY"/>
-                            <constraint firstItem="nQ2-ID-hfB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="bFP-Im-VJR"/>
-                            <constraint firstItem="nQ2-ID-hfB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="etu-Xm-ole"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="nQ2-ID-hfB" secondAttribute="bottom" id="q1u-v0-xi3"/>
-                            <constraint firstItem="nQ2-ID-hfB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="206" id="wti-bs-cnV"/>
-                            <constraint firstItem="nQ2-ID-hfB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xXz-N3-OQH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nQ2-ID-hfB" secondAttribute="trailing" constant="67" id="JUs-ab-iRX"/>
+                            <constraint firstItem="nQ2-ID-hfB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Pz3-gp-4kt"/>
+                            <constraint firstItem="nQ2-ID-hfB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="ebn-Pc-Mm9"/>
+                            <constraint firstItem="nQ2-ID-hfB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="j46-YF-dTf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
