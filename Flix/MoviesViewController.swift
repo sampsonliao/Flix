@@ -31,7 +31,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             if let error = error {
                 print(error.localizedDescription)
             } else if let data = data {
-                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]		
                 
                 self.movies = dataDictionary["results"] as! [[String: Any]]
                 
@@ -64,7 +64,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let title = movie["title"] as! String
         let synopsis = movie["overview"] as! String
         
-        cell.titleLabel!.text = title // Swift optional allows for nil
+        cell.titleLabel.text = title // Swift optional allows for nil
         cell.synopsisLabel.text = synopsis
         
         let baseUrl = "https://image.tmdb.org/t/p/w185"
