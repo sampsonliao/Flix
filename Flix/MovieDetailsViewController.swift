@@ -9,7 +9,7 @@
 import UIKit
 import AlamofireImage
 
-class MovieDetailsViewController: MoviesViewController {
+class MovieDetailsViewController: UIViewController {
     
     
     @IBOutlet weak var backdropView: UIImageView!
@@ -35,7 +35,7 @@ class MovieDetailsViewController: MoviesViewController {
     }
     
     
-    
+    /*
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -44,14 +44,8 @@ class MovieDetailsViewController: MoviesViewController {
         // Pass the selected object to the new view controller.
         
         
-        let cell = sender as! UITableViewCell
-        let indexPath = tableView.indexPath(for: cell)!
-        let movie = movies[indexPath.row]
-        
-        let detailsViewController = segue.destination as! MovieDetailsViewController
-        detailsViewController.movie = movie
-        tableView.deselectRow(at: indexPath, animated: true)
+   
     }
-    
+    */
     
 }
