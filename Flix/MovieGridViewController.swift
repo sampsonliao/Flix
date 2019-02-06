@@ -20,6 +20,12 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieGridCell", for: indexPath) as! MovieGridCell
         
         let movie = movies[indexPath.item]
+        
+        let title = movie["title"] as! String
+        let synopsis = movie["overview"] as! String
+        cell.titleLabel = title // Swift optional allows for nil
+        cell.synopsisLabel = synopsis
+        
         let baseUrl = "https://image.tmdb.org/t/p/w185"
         let posterPath = movie["poster_path"] as! String
         let posterUrl = URL(string: baseUrl + posterPath)
@@ -61,7 +67,6 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
                 self.collectionView.reloadData()
                 self.movies = dataDictionary["results"] as! [[String: Any]]
                 
-                print(self.movies)
                 // TODO: Get the array of movies
                 // TODO: Store the movies in a property to use elsewhere
                 // TODO: Reload your table view data
@@ -74,14 +79,23 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+     
+     
+     let cell = sender as! UICollectionViewCell
+     let indexPath = collectionView.indexPath(for: cell)!
+     let movie = movies[indexPath.item]
+     
+     let detailsViewController = segue.destination as! MovieDetailsViewController
+     detailsViewController.movie = movie
+     collectionView.deselectItem(at: indexPath, animated: true)
     }
-    */
+    
 
 }

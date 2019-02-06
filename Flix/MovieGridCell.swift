@@ -10,6 +10,13 @@ import UIKit
 
 class MovieGridCell: UICollectionViewCell {
 
-    
+    var synopsisLabel: String = ""
+    var titleLabel: String = ""
     @IBOutlet weak var posterView: UIImageView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
 }
