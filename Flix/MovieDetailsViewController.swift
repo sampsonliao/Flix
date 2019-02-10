@@ -15,8 +15,8 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var backdropView: UIImageView!
     @IBOutlet weak var posterView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var synopsisLabel: UILabel!
     
+    @IBOutlet weak var synopsisLabel: UITextView!
     
     var movie: [String: Any]!
     override func viewDidLoad() {
@@ -41,18 +41,22 @@ class MovieDetailsViewController: UIViewController {
         backdropView.af_setImage(withURL: backdropUrl!)
     }
     
+    @IBAction func tapPoster(_ sender: Any) {
+        performSegue(withIdentifier: "trailerSegue", sender: nil)
+        
+    }
     
-    /*
+    
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        
-        
-   
+        let trailerViewControler = segue.destination as! TrailerViewController
+        let movieId = movie["id"]
+        trailerViewControler.movieId = movieId as? Int
     }
-    */
+    
     
 }
