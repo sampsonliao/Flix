@@ -19,6 +19,10 @@
 		B32BB99621FFB94400F7B7E2 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32BB99521FFB94400F7B7E2 /* MoviesViewController.swift */; };
 		B32BB99821FFCC0700F7B7E2 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32BB99721FFCC0700F7B7E2 /* MovieCell.swift */; };
 		B3B09D122208CD6600CC6DC1 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B09D112208CD6600CC6DC1 /* MovieDetailsViewController.swift */; };
+		B3B09D14220AC62E00CC6DC1 /* MovieGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B09D13220AC62E00CC6DC1 /* MovieGridViewController.swift */; };
+		B3B09D16220B563F00CC6DC1 /* MovieGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B09D15220B563F00CC6DC1 /* MovieGridCell.swift */; };
+		B3D641ED220C0BB7001D681C /* TrailerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D641EC220C0BB7001D681C /* TrailerViewController.swift */; };
+		B3D641F0221020D3001D681C /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D641EE221020D3001D681C /* YTPlayerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,11 @@
 		B32BB99521FFB94400F7B7E2 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		B32BB99721FFCC0700F7B7E2 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		B3B09D112208CD6600CC6DC1 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		B3B09D13220AC62E00CC6DC1 /* MovieGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridViewController.swift; sourceTree = "<group>"; };
+		B3B09D15220B563F00CC6DC1 /* MovieGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridCell.swift; sourceTree = "<group>"; };
+		B3D641EC220C0BB7001D681C /* TrailerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerViewController.swift; sourceTree = "<group>"; };
+		B3D641EE221020D3001D681C /* YTPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
+		B3D641EF221020D3001D681C /* YTPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
 		B58D98CA6C71DD61CCAD5089 /* Pods-Flix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flix/Pods-Flix.debug.xcconfig"; sourceTree = "<group>"; };
 		E4E10BE82EEF5226E9DEA242 /* Pods-Flix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flix.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flix/Pods-Flix.release.xcconfig"; sourceTree = "<group>"; };
 		FDDFFC3060634E46115D64DD /* Pods_FlixTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlixTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,10 +137,15 @@
 		B32BB96621FFB7E800F7B7E2 /* Flix */ = {
 			isa = PBXGroup;
 			children = (
+				B3D641EF221020D3001D681C /* YTPlayerView.h */,
+				B3D641EE221020D3001D681C /* YTPlayerView.m */,
+				B3B09D13220AC62E00CC6DC1 /* MovieGridViewController.swift */,
 				B32BB99521FFB94400F7B7E2 /* MoviesViewController.swift */,
 				B3B09D112208CD6600CC6DC1 /* MovieDetailsViewController.swift */,
 				B32BB96721FFB7E800F7B7E2 /* AppDelegate.swift */,
 				B32BB96B21FFB7E800F7B7E2 /* Main.storyboard */,
+				B3D641EC220C0BB7001D681C /* TrailerViewController.swift */,
+				B3B09D15220B563F00CC6DC1 /* MovieGridCell.swift */,
 				B32BB99721FFCC0700F7B7E2 /* MovieCell.swift */,
 				B32BB96E21FFB7EA00F7B7E2 /* Assets.xcassets */,
 				B32BB97021FFB7EA00F7B7E2 /* LaunchScreen.storyboard */,
@@ -313,6 +327,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Flix/Pods-Flix-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/youtube-ios-player-helper/youtube_ios_player_helper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -320,6 +335,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/youtube_ios_player_helper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -399,9 +415,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3B09D14220AC62E00CC6DC1 /* MovieGridViewController.swift in Sources */,
 				B3B09D122208CD6600CC6DC1 /* MovieDetailsViewController.swift in Sources */,
+				B3D641ED220C0BB7001D681C /* TrailerViewController.swift in Sources */,
 				B32BB96821FFB7E800F7B7E2 /* AppDelegate.swift in Sources */,
 				B32BB99621FFB94400F7B7E2 /* MoviesViewController.swift in Sources */,
+				B3B09D16220B563F00CC6DC1 /* MovieGridCell.swift in Sources */,
+				B3D641F0221020D3001D681C /* YTPlayerView.m in Sources */,
 				B32BB99821FFCC0700F7B7E2 /* MovieCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -31,7 +31,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             if let error = error {
                 print(error.localizedDescription)
             } else if let data = data {
-                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]		
                 
                 self.movies = dataDictionary["results"] as! [[String: Any]]
                 
@@ -65,7 +65,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let synopsis = movie["overview"] as! String
         
         cell.titleLabel!.text = title // Swift optional allows for nil
-        cell.synopsisLabel.text = synopsis
+        cell.synopsisLabel!.text = synopsis
         
         let baseUrl = "https://image.tmdb.org/t/p/w185"
         let posterPath = movie["poster_path"] as! String
@@ -77,14 +77,22 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let movie = movies[indexPath.row]
+        
+        let detailsViewController = segue.destination as! MovieDetailsViewController
+        detailsViewController.movie = movie
+        tableView.deselectRow(at: indexPath, animated: true)
     }
-    */
+ 
 
 }
